@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Beatriz y José</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <audio id="heroMusic" autoplay loop>
+        <source src="hero_theme.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <header>
+        <h1>¡La Gran Boda de Beatriz y José!</h1>
+        <p>8 de noviembre de 2025 - 17:00</p>
+    </header>
+
+    <section class="hero-section">
+        <h2>Los Superhéroes del Amor</h2>
+        <img src="superheroes.png" alt="Beatriz y José como superhéroes">
+    </section>
+
+    <section class="ubicacion">
+        <h2>Ubicación</h2>
+        <p>¡Únete a nuestra aventura épica en esta dirección!</p>
+        <a href="https://maps.app.goo.gl/c9fBzLeyKeNjm9NG8" target="_blank" class="button">Ver en Google Maps</a>
+    </section>
+
+    <section class="confirmacion">
+        <h2>Confirma tu asistencia</h2>
+        <form id="confirmForm">
+            <label>¿Usarás el autobús?</label>
+            <select name="bus">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label>¿Tienes alergias alimentarias?</label>
+            <input type="text" name="alergias" placeholder="Indica tus alergias">
+
+            <label>Selecciona tu menú:</label>
+            <select name="menu">
+                <option value="normal">Normal</option>
+                <option value="infantil">Infantil</option>
+                <option value="vegetariano">Vegetariano</option>
+            </select>
+
+            <label>¿Asistirás con menores?</label>
+            <select name="menores">
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Enviar Confirmación</button>
+        </form>
+    </section>
+
+    <section class="libro-firmas">
+        <h2>Libro de Firmas</h2>
+        <textarea id="mensaje" placeholder="Deja tu mensaje..."></textarea>
+        <input type="file" id="foto" accept="image/*">
+        <button onclick="guardarMensaje()">Enviar</button>
+        <div id="mensajes"></div>
+    </section>
+
+</body>
+</html>
